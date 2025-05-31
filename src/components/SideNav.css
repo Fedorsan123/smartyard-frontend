@@ -1,0 +1,106 @@
+/* src/components/SideNav.css */
+
+/* Полупрозрачный фон, закрывающий весь экран */
+.sidenav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+/* Ключевые кадры анимации slide-in (слева направо) */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Боковая панель (скрыта изначально за экраном) */
+.sidenav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 75%;           /* Занимает 75% ширины экрана */
+  max-width: 300px;     /* Жёсткий максимум в пикселях */
+  height: 100%;
+  background-color: #ffffff;
+  padding: 24px 16px;
+  overflow-y: auto;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+
+  /* Плавная анимация появления */
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+/* Каждый отдельный раздел внутри навигации */
+.sidenav-section {
+  margin-bottom: 16px;
+}
+
+/* Заголовок раздела */
+.sidenav-header {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+/* Обычная ссылка (пункт меню) */
+.sidenav-link {
+  font-size: 16px;
+  padding: 8px 0;
+  cursor: pointer;
+  color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all .3s ease-in-out;
+}
+
+/* Эффект при наведении (или при тапе) */
+.sidenav-link:hover {
+  color: #2e2e2e;
+}
+
+/* Горизонтальная линия, разделяющая разделы */
+hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 12px 0;
+}
+
+/* Пункт «Загруженность» внутри Аналитики — flex, чтобы стрелка справа */
+.collapsible {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Стрелка, которая поворачивается при открытии */
+.arrow {
+  font-size: 14px;
+  transition: transform 0.2s;
+}
+
+/* Когда открыт submenu, поворачиваем стрелку вверх */
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+/* Вложенный контейнер для подпунктов */
+.sidenav-submenu {
+  padding-left: 12px;   /* Немного «въехало» вправо */
+  margin-top: 8px;
+}
+
+/* Вложенные ссылки чуть меньше текста и отступлены */
+.sidenav-submenu .sidenav-link {
+  padding: 6px 0;
+  font-size: 15px;
+}
