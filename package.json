@@ -9,7 +9,7 @@
     "build": "vite build",
     "serve": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist --repo https://github.com/Fedorsan123/smartyard-frontend.git"
   },
   "dependencies": {
     "react": "^19.1.0",
