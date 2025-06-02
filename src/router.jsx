@@ -6,37 +6,31 @@ import LoginPage    from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import Dashboard    from './pages/Dashboard';
 import ProfilePage  from './pages/ProfilePage';
+import PaymentPage  from './pages/PaymentPage';
+import SubscriptionPage  from './pages/SubscriptionPage'; 
 import RequireAuth  from './components/RequireAuth';
 
 const router = createBrowserRouter([
-  // Редирект с корня "/" на /login
-  {
-    path: '/',
-    element: <Navigate to="/login" replace />
-  },
-  // Публичные маршруты без обёрток
-  {
-    path: '/login',
-    element: <LoginPage />
-  },
-  {
-    path: '/register',
-    element: <RegisterPage />
-  },
-  // Приватные маршруты (каждый оборачиваем в RequireAuth отдельно)
+  { path: '/',        element: <Navigate to="/login" replace /> },
+  { path: '/login',   element: <LoginPage /> },
+  { path: '/register',element: <RegisterPage /> },
   {
     path: '/dashboard',
     element: <Dashboard />
   },
   {
     path: '/profile',
-    element: <ProfilePage />
+    element:<ProfilePage />
   },
-  // Все прочие пути → редирект на "/"
   {
-    path: '*',
-    element: <Navigate to="/" replace />
-  }
+    path: '/payment',
+    element: <PaymentPage />
+  },
+  {
+    path: '/subscription-info',
+    element:<SubscriptionPage />
+  },
+  { path: '*', element: <Navigate to="/" replace /> }
 ]);
 
 export default router;

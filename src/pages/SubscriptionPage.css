@@ -1,0 +1,162 @@
+/* src/pages/SubscriptionPage.css */
+
+/* Сброс отступов/паддингов для всего содержимого */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Задаём общий шрифт и фон */
+html, body, #root {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+}
+
+/* Обёртка всего экрана */
+.subscription-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Тонкая фиолетовая полоса сверху */
+.subscription-topbar {
+  height: 4px;
+  background-color: #8d00ff;
+}
+
+/* Шапка с «назад» и логотипом */
+.subscription-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    box-shadow: 0px 5px 5px #a1a1a1;
+}
+
+/* Кнопка «назад» (иконка слева) */
+.subscription-back-btn {
+  position: absolute;
+  left: 5%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+/* Логотип «MY YARD» */
+.subscription-logo {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #000000;
+}
+.subscription-logo img{
+    width: 120px;
+}
+
+/* Основное содержимое (информация о подписке) */
+.subscription-content {
+    display: flex;
+    margin-top: 75px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px
+}
+
+/* Заголовок «О подписке» */
+.subscription-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+/* Карточка с данными о подписке */
+.subscription-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 16px;
+  max-width: 360px;
+  margin: 0 auto 24px; /* центрируем и отступ снизу */
+}
+
+/* Название тарифа */
+.subscription-plan {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+/* Дата окончания и оставшиеся дни */
+.subscription-details {
+  font-size: 16px;
+  color: #333333;
+  margin-bottom: 12px;
+}
+
+/* Список преимуществ (опционально) */
+.subscription-benefits {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.subscription-benefits li {
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 4px;
+  list-style: none;
+  position: relative;
+  padding-left: 20px;
+}
+
+/* Маленькая «галочка» или кружок перед каждым пунктом (можно заменить на любую иконку) */
+.subscription-benefits li::before {
+  content: '✔️';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 14px;
+}
+
+/* Кнопка «Продлить подписку» */
+.extend-button {
+  width: 100%;
+  max-width: 360px;
+  height: 44px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 22px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+  text-align: center;
+  cursor: pointer;
+  margin: 0 auto;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.extend-button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Текст «Показать историю платежей» (ссылка) */
+.subscription-history {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 14px;
+  color: #1e88e5;
+  cursor: pointer;
+}
+
+.subscription-history:hover {
+  text-decoration: underline;
+}

@@ -27,14 +27,8 @@ body, html, #root {
     box-shadow: 0px 5px 5px #a1a1a1;
 }
 
-/* Блок с логотипом My Yard */
-.login-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 12px 0;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e0e0e0; /* тонкая серая линия под логотипом */
+.login-header img{
+    width: 120px;
 }
 
 .login-logo h1 {

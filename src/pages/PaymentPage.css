@@ -1,4 +1,4 @@
-/* src/pages/ProfilePage.css */
+/* src/pages/PaymentPage.css */
 
 /* Сброс отступов/паддингов для всего содержимого */
 * {
@@ -15,31 +15,29 @@ html, body, #root {
 }
 
 /* Обёртка всего экрана */
-.profile-container {
+.payment-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
 /* Тонкая фиолетовая линия сверху */
-.profile-topbar {
+.payment-topbar {
   height: 4px;
   background-color: #8d00ff;
 }
 
 /* Шапка с «назад» и логотипом */
-.profile-header {
-  position: relative;
-  height: 100px;
-  background-color: #ffffff;
+.payment-header {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100px;
   box-shadow: 0px 5px 5px #a1a1a1;
 }
 
 /* Кнопка «назад» (иконка слева) */
-.profile-back-btn {
+.payment-back-btn {
   position: absolute;
   left: 5%;
   width: 24px;
@@ -48,45 +46,45 @@ html, body, #root {
 }
 
 /* Логотип «MY YARD» по центру */
-.profile-logo {
+.payment-logo {
   display: flex;
   align-items: center;
 }
-.profile-logo img{
-  width: 120px;
+.payment-logo img{
+    width: 120px;
 }
-
 /* Основное содержимое (форма) */
-.profile-content {
-    display: flex;
-    margin-top: 75px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px
+.payment-content {
+  display: flex;
+  margin-top: 75px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
 }
 
-/* Заголовок «Настройки» */
-.profile-title {
+/* Заголовок «Оплата» */
+.payment-title {
   font-size: 24px;
   font-weight: 600;
   color: #000000;
   margin-bottom: 24px;
   text-align: left;
 }
-.profile-form{
-    width: 80%;
-    max-width: 360px;
+
+.payment-form{
+    max-width: '360px';
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 /* Общая обёртка для полей ввода */
 .input-group {
   width: 100%;
-  max-width: 360px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   position: relative;
 }
 
@@ -102,22 +100,10 @@ html, body, #root {
   color: #9e9e9e;
 }
 
-/* Иконка справа внутри поля */
-.input-group .icon-right {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  color: #9e9e9e;
-}
-
 /* Текстовое поле */
 .input-group input {
   width: 100%;
-  padding: 12px 36px 12px 36px; /* отступ слева и справа под иконки */
+  padding: 12px 12px 12px 36px; /* отступ слева под иконку */
   font-size: 16px;
   border: none;
   border-bottom: 1px solid #9e9e9e;
@@ -125,7 +111,7 @@ html, body, #root {
   color: #000000;
 }
 
-/* При фокусе нижняя линия становится тёмнее */
+/* При фокусе нижняя линия становится чёрной */
 .input-group input:focus {
   border-bottom: 1px solid #000000;
 }
@@ -136,7 +122,25 @@ html, body, #root {
   font-size: 16px;
 }
 
-/* Чтобы иконка справа («карандаш» или «стрелка») была кликабельной */
-.input-group .icon-right:hover {
-  opacity: 0.7;
+/* Кнопка «Оплатить» */
+.pay-button {
+  width: 100%;
+  max-width: 360px;
+  height: 44px;
+  margin-top: 16px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 22px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* На hover изменяем фон/цвет */
+.pay-button:hover {
+  background-color: #000000;
+  color: #ffffff;
 }

@@ -53,6 +53,9 @@ export default function SideNav({ onClose }) {
               <div className="sidenav-link" onClick={() => handleNavigate('/dashboard')}>
                 Мой двор
               </div>
+              <div className="sidenav-link" onClick={() => handleNavigate('#')}>
+                Скоро
+              </div>
             </div>
           )}
         </div>

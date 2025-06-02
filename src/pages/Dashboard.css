@@ -24,12 +24,12 @@ html, body, #root {
 /* Шапка с меню и логотипом */
 .dashboard-header {
   position: relative;
-  height: 60px;
+  height: 100px;
   background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0px 5px 5px #a1a1a1;
 }
 
 /* Фиолетовая тонкая линия сверху */
@@ -41,21 +41,23 @@ html, body, #root {
 /* Иконка «гамбургер-меню» слева */
 .dashboard-menu-btn {
   position: absolute;
-  left: 16px;
-  width: 24px;
-  height: 24px;
+  left: 5%;
   cursor: pointer;
+}
+.dashboard-menu-btn img{
+  width: 30px;
+  height: 30px;
 }
 
 /* Логотип «MY YARD» по центру */
 .dashboard-logo {
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #000000;
   display: flex;
   align-items: center;
 }
+.dashboard-logo img{
+  width: 120px;
+}
+
 
 /* Основной контент ниже шапки */
 .dashboard-content {
